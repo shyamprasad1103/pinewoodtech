@@ -2,7 +2,7 @@ CREATE TABLE [dbo].[Customer] (
     [Id]            INT                IDENTITY (100, 1) NOT NULL,
     [Key]           NVARCHAR (40)      CONSTRAINT [DF_Customer_Key] DEFAULT ('cstmr_'+Trim(lower(replace(CONVERT([nvarchar](40),newid()),'-','')))) NOT NULL,
     [TypeId]        INT                CONSTRAINT [DF_Customer_TypeId] NOT NULL,
-    [Title]         CHAR (10)          NULL,
+    [Title]         NVARCHAR (10)      NULL,
     [FirstName]     NVARCHAR (40)      NULL,
     [LastName]      NVARCHAR (40)      NULL,
     [Email]         NVARCHAR (250)     NULL,

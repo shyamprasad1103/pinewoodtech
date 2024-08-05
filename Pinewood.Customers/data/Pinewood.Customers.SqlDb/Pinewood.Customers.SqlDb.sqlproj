@@ -72,4 +72,7 @@
     <Build Include="Tables\CustomerType.sql" />
     <None Include="DataCreation\dbo.CustomerType.startup.data.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DataCreation\dbo.Customer.startup.data.sql" />
+  </ItemGroup>
 </Project>

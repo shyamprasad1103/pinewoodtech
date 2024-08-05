@@ -10,11 +10,108 @@
 
 <div id="customertypes-holder"></div>
 
+<div id="customertypes-component-container">
+    <div id="customertype-create-container"></div>
+    <div id="customertypes-list-container"></div>
+</div>
+
+<div id="model-container"></div>
+
+<script id="component-template" type="text/x-handlebars-template">
+
+    <div style="padding-bottom: 20px;">
+        <button type="button" class="btn btn-outline-primary" id="{{options.dom.ids.createBtn}}">Add New</button>
+        <button type="button" class="btn btn-outline-primary disabled {{options.dom.classes.editMode}}" id="{{options.dom.ids.editBtn}}">Edit</button>
+        <button type="button" class="btn btn-outline-primary disabled {{options.dom.classes.editMode}}" id="{{options.dom.ids.deleteBtn}}">Delete</button>
+    </div>
+
+</script>
+
+<script id="table-template" type="text/x-handlebars-template">
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">OrderIndex</th>
+                <th scope="col">Active</th>
+            </tr>
+        </thead>
+        <tbody id="{{options.dom.ids.customerTypesListContainer}}"> </tbody>
+    </table>
+
+</script>
+
+<script id="row-template" type="text/x-handlebars-template">
+
+    <tr {{options.dom.attr.itemRow}}="{{customerType.id}}">
+        <td>{{customerType.id}}</td>
+        <td>
+            <span class="{{options.dom.classes.nameSpn}}">{{customerType.name}}</span>
+        </td>
+        <td>
+            <span class="{{options.dom.classes.descSpn}}">{{customerType.description}}</span>
+        </td>
+        <td>
+            <span>{{customerType.orderIndex}}</span>
+        </td>
+        <td>
+            <span class="{{options.dom.classes.activeSpn}}">
+            
+                {{#if customerType.isDisabled}}
+                    No
+                {{else}}
+                    Yes
+                {{/if}}
+
+            </span>
+        </td>
+    </tr>
+
+</script>
+
+<script id="popup-model-template" type="text/x-handlebars-template">
+
+    <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="popup-model-header-txt">{{header}}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="{{options.dom.ids.customerTypeNameTxt}}" value="{{name}}">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="{{options.dom.ids.customerTypeDescTxt}}">{{description}}</textarea>
+              </div>
+              <div class="form-check form-switch">
+                  <label class="form-check-label" for="{{options.dom.ids.customerTypeActiveChk}}">Active</label>
+                  <input type="checkbox" class="form-check-input {{options.dom.ids.customerTypeActiveChk}}" {{#if active}}checked{{/if}} role="switch" id="{{options.dom.ids.customerTypeActiveChk}}">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="{{options.dom.ids.popupSaveBtn}}">{{saveBtnTxt}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</script>
+
 @section Scripts {
     <script type="text/javascript">
 
         $(document).ready(function () {
-            CustomerTypesPageComponent.init('@Model.CustomersBaseUrl', '#customertypes-holder');
+            CustomerTypesPageComponent.init('@Model.CustomersBaseUrl');
         });
 
     </script>

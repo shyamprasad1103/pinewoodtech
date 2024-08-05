@@ -28,7 +28,8 @@ insert into #CustomerType_box
 values
 	(1, 'Internal', 'Internal customer', 1, 0, sysdatetimeoffset(), 'system', sysdatetimeoffset(), 'system'), 
 	(2, 'Business', 'Business customer', 2, 0, sysdatetimeoffset(), 'system', sysdatetimeoffset(), 'system'), 
-	(3, 'Retail', 'Retail customer', 3, 0, sysdatetimeoffset(), 'system', sysdatetimeoffset(), 'system')
+	(3, 'Retail', 'Retail customer', 3, 0, sysdatetimeoffset(), 'system', sysdatetimeoffset(), 'system'),
+	(4, 'New', 'New customer', 4, 0, sysdatetimeoffset(), 'system', sysdatetimeoffset(), 'system')
 
 --rollback
 commit;

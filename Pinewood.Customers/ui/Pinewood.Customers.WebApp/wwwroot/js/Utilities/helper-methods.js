@@ -20,4 +20,15 @@ var showError = function (msg) {
     alert(msg);
 }
 
+var showMessage = function () {
+
+    $('#successAlert').fadeIn();
+    setTimeout(() => {
+        $('#successAlert').fadeOut();
+    }, 2000);
+};
+function closeModal() {
+    $('#popupModal').modal('hide');
+}
+
 //#endregion ERROR HANDLING

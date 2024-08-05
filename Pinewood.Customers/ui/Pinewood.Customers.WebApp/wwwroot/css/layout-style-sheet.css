@@ -1,0 +1,59 @@
+﻿
+#page-body {
+}
+
+/*#region header*/
+
+#page-header {
+    padding-bottom: 20px;
+}
+
+#header-container {
+}
+
+#header-titles-container {
+    width: 80%;
+}
+
+.header-title {
+    display: block;
+    padding-bottom: 10px;
+}
+
+    .header-title.title {
+        font-size: 2.25rem;
+        font-weight: 300;
+    }
+
+    .header-title.subtitle {
+        font-size: 1.375rem;
+    }
+
+#header-logo-container {
+    width: 20%;
+}
+
+.header-logo {
+}
+
+/*#endregion */
+
+/*#region content*/
+
+#page-content {
+    min-height: 500px;
+}
+
+/*#endregion */
+
+/*#region footer*/
+
+#page-footer {
+    padding: 20px 0;
+}
+
+.footer-text {
+}
+
+/*#endregion */
+

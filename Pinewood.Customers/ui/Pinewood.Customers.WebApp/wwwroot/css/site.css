@@ -1,22 +1,55 @@
-html {
-  font-size: 14px;
+body {
+    padding: 30px;
 }
+
+html {
+    font-family Lato font-size 18px font-stretch 100% font-style normal font-weight 400 font-family: sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 0;
+    color: #616362;
+    position: relative;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.btn {
+    min-width: 110px;
+}
+
+    .btn.disabled, .btn:disabled, fieldset:disabled {
+        cursor: not-allowed;
+    }
+
+.table tbody tr.highlight td {
+    background-color: #20c997;
+}
+
+.page-section {
+    width: 100%;
+    display: inline-block;
+}
+
+.bold {
+    font-weight: 300;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*#endregion*/
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+    html {
+        font-size: 16px;
+    }
 }

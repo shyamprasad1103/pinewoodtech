@@ -26,6 +26,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapGet("/", async context =>
+{
+    context.Response.Redirect("/customertypes");
+});
+
+
 app.MapRazorPages();
 
 app.Run();
