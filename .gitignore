@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Pinewood.Customers/.vs
+/Pinewood.Customers/code/infradata/Pinewood.Customers.Infrastructure.Data/bin/Debug/net8.0
+/Pinewood.Customers/code/infradata/Pinewood.Customers.Infrastructure.Data/obj
+/Pinewood.Customers/code/Pinewood.Customers.Entities/bin
+/Pinewood.Customers/code/Pinewood.Customers.Entities/obj
+/Pinewood.Customers/code/services/Pinewood.Customers.API/bin/Debug/net8.0
+/Pinewood.Customers/code/services/Pinewood.Customers.API/obj
+/Pinewood.Customers/data/Pinewood.Customers.SqlDb/obj
+/Pinewood.Customers/ui/Pinewood.Customers.WebApp/bin/Debug/net8.0
+/Pinewood.Customers/ui/Pinewood.Customers.WebApp/obj
