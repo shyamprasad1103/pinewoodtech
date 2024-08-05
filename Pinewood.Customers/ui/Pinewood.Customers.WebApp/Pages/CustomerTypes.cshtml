@@ -1,0 +1,23 @@
+﻿@page "/customertypes"
+@model Pinewood.Customers.WebApp.Pages.CustomerTypesModel
+
+@{
+    ViewData["Title"] = "Customer Types";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<script src="~/js/pages/customertypes/customertypes-page.js"></script>
+
+<div id="customertypes-holder"></div>
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            CustomerTypesPageComponent.init('@Model.CustomersBaseUrl', '#customertypes-holder');
+        });
+
+    </script>
+}
+
+

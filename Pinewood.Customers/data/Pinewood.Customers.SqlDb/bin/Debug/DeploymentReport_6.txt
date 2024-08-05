@@ -1,0 +1,34 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Customer] (Table)
+       [dbo].[Customer].[IX_Customer_TypeId] (Index)
+       [dbo].[Customer].[IX_Customer_Email] (Index)
+       [dbo].[CustomerType] (Table)
+       [dbo].[CustomerType].[IX_AccountType_Disabled] (Index)
+       [dbo].[DF_Customer_Key] (Default Constraint)
+       [dbo].[DF_Customer_IsDisabled] (Default Constraint)
+       [dbo].[DF_Customer_IsLocked] (Default Constraint)
+       [dbo].[DF_Customer_CreatedOn] (Default Constraint)
+       [dbo].[DF_Customer_CreatedBy] (Default Constraint)
+       [dbo].[DF_Customer_ModifiedOn] (Default Constraint)
+       [dbo].[DF_Customer_ModifiedBy] (Default Constraint)
+       [dbo].[DF_CustomerType_Description] (Default Constraint)
+       [dbo].[DF_CustomerType_OrderIndex] (Default Constraint)
+       [dbo].[DF_CustomerType_IsDisabled] (Default Constraint)
+       [dbo].[DF_CustomerType_CreatedOn] (Default Constraint)
+       [dbo].[DF_CustomerType_CreatedBy] (Default Constraint)
+       [dbo].[DF_CustomerType_ModifiedOn] (Default Constraint)
+       [dbo].[DF_CustomerType_ModifiedBy] (Default Constraint)
+       [dbo].[FK_Customer_CustomerType] (Foreign Key)
+
+** Supporting actions

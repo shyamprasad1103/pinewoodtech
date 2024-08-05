@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[CustomerType].[IsSystem] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       [dbo].[CustomerType].[IX_AccountType_Disabled] (Index)
+       [dbo].[DF_CustomerType_IsSystem] (Default Constraint)
+     Alter
+       [dbo].[CustomerType] (Table)
+     Create
+       [dbo].[CustomerType].[IX_AccountType_Disabled] (Index)
+
+** Supporting actions
+
+The column [dbo].[CustomerType].[IsSystem] is being dropped, data loss could occur.
+

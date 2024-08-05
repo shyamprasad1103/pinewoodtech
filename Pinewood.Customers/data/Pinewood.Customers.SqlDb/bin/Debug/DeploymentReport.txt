@@ -1,0 +1,25 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[customers] (Table)
+       [dbo].[customers].[IX_customers_TypeId] (Index)
+       [dbo].[customers].[IX_customers_Email] (Index)
+       [dbo].[DF_customers_Key] (Default Constraint)
+       [dbo].[DF_customers_TypeId] (Default Constraint)
+       [dbo].[DF_customers_IsDisabled] (Default Constraint)
+       [dbo].[DF_customers_IsLocked] (Default Constraint)
+       [dbo].[DF_customers_CreatedOn] (Default Constraint)
+       [dbo].[DF_customers_CreatedBy] (Default Constraint)
+       [dbo].[DF_customers_ModifiedOn] (Default Constraint)
+       [dbo].[DF_customers_ModifiedBy] (Default Constraint)
+
+** Supporting actions
